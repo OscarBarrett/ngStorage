@@ -11,6 +11,10 @@ module.exports = function(grunt) {
         browsers = ['PhantomJS', 'Firefox'];
     }
 
+    if (process.platform == 'darwin') {
+      browsers.push('SafariPrivate');
+    }
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
